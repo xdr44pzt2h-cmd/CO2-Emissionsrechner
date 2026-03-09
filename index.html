@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CO₂-Emissionsrechner</title>
+  <link rel="icon" type="image/jpg" href="images/images/co2-cloud-2.png">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#Distanz">Distanz</a>
+      <a href="#Verkehrsmittel">Verkehrsmittel</a>
+    </nav>
+    <h1>Hello, traveller!</h1>
+    <p>Du überlegst, welches Verkehrsmittel du für deine nächste Reise verwenden wirst?</p>
+  </header>
+
+  <main>
+    <section id="Distanz">
+      <h2>Gib hier die Distanz deiner Reise ein</h2>
+      <form action="/action_page.php" method="post" class="Eingabe">
+        <label for="Distanz">Distanz</label>
+        <input id="distanz" type="number">
+    </section>
+
+    <section id="Verkehrsmittel">
+      <h2>Wähle hier die zu betrachtenden Verkehrsmittel aus</h2>
+      <input type="checkbox" id="Auto"> 🚗 Auto<br>
+        <div id="autoOptionen" style="display:none;">
+          <label for="personenAuto">Personen im Auto:</label>
+          <input type="number" id="personenAuto" min="1" value="1">
+        </div>
+      <input type="checkbox" id="Bus"> 🚌 Bus<br>
+      <input type="checkbox" id="Fahrrad"> 🚲 Fahrrad<br>
+      <input type="checkbox" id="zuFuss"> 🚶 Zu Fuß<br>
+      <input type="checkbox" id="Flugzeug"> ✈️ Flugzeug<br>  
+      </form>
+    </section>
+
+    <section id="Ausgabe">
+      <h2>Vergleich</h2>
+      <button id="berechnenBtn">Berechnen</button>
+      <p id="ausgabe"></p>
+        <table class="Ausgabe">
+          <thead>
+            <tr>
+              <th>Verkehrsmittel</th>
+              <th>CO₂ (kg)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>🚗 Auto</td>
+              <td id="co2Auto">-</td>
+            </tr>
+
+            <tr>
+              <td>🚌 Bus</td>
+              <td id="co2Bus">–</td>
+            </tr>
+
+            <tr>
+              <td>🚲 Fahrrad</td>
+              <td id="co2Fahrrad">–</td>
+            </tr>
+
+            <tr>
+              <td>🚶 Zu Fuß</td>
+              <td id="co2Fuss">–</td>
+            </tr>
+
+            <tr>
+              <td>✈️ Flugzeug</td>
+              <td id="co2Flugzeug">–</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="myPlot" 
+          style="width:100%; max-width:700px; height:400px; display:none;">
+        </div>
+
+        <div class="memeBox">
+          <img 
+            id="memeBild"
+            src="images/images/grr-lauf-zu-fuss.jpeg" 
+            style="display:none; width:250px; margin:20px auto;"
+          >
+        </div>
+       
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Maja und Anna. Built with ❤️ using HTML, JavaScript & CSS.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
