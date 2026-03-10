@@ -115,6 +115,8 @@ button.addEventListener("click", () => {
   if (xArray.length > 0) {
     Plotly.newPlot("myPlot", data, layout);
     document.getElementById("myPlot").style.display = "block";
+    } else {
+      document.getElementById("myPlot").style.display = "none";
   }; 
 
   // Meme anzeigen (Popup)
