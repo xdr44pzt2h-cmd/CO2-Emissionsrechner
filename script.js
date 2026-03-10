@@ -50,23 +50,13 @@ button.addEventListener("click", () => {
   if (document.getElementById("Auto").checked) {
     const personenAuto = Number(personenAutoFeld.value);
 
-    if (personenAuto <= 0) {
+    if (personenAuto =< 0) {
       alert("Diese Website unterstützt noch kein teleportiertes Fahren - kommen Sie 2036 wieder!");
-      
-        xArray.length = 0;
-        yArray.length = 0;
-        ausgabe.innerHTML= ""; 
-  
         return;
       }
     
     if (personenAuto > 7) {
       alert("Bruder dein Auto ist voll!?");
-
-          xArray.length = 0;
-          yArray.length = 0;
-          ausgabe.innerHTML= ""; 
-          
           return;
     }
 
@@ -143,6 +133,7 @@ button.addEventListener("click", () => {
 
 
 });
+
 
 
 
