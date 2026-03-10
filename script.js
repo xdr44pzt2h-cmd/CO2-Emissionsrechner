@@ -86,7 +86,7 @@ button.addEventListener("click", () => {
     const co2Fuss = distanz * faktorFuss;
     document.getElementById("co2Fuss").textContent =
       co2Fuss.toFixed(2);
-      xArray.push("🚶 zuFuss"); 
+      xArray.push("🚶 zu Fuss"); 
       yArray.push(co2Fuss);
     }
 
@@ -127,5 +127,6 @@ button.addEventListener("click", () => {
   } else {
     meme.style.display = "none";
   }
+
 
 });
