@@ -38,8 +38,6 @@ button.addEventListener("click", () => {
 
   xArray.length = 0;
   yArray.length = 0;
-  xArray.length = 0;
-  yArray.length = 0;
 
   // Distanz holen
   const distanz = Number(distanzFeld.value);
@@ -49,8 +47,10 @@ button.addEventListener("click", () => {
         
   if (document.getElementById("Auto").checked) {
     const personenAuto = Number(personenAutoFeld.value);
+    
+    console.log(personenAuto); 
 
-    if (personenAuto === 0) {
+    if (!personenAuto || personenAuto <1) {
       alert("Diese Website unterstützt noch kein teleportiertes Fahren - kommen Sie 2036 wieder!");
         return;
       }
@@ -61,8 +61,7 @@ button.addEventListener("click", () => {
     }
 
     const co2Auto = (distanz * faktorAuto) / personenAuto;
-    document.getElementById("co2Auto").textContent =
-      co2Auto.toFixed(2);
+    document.getElementById("co2Auto").textContent = co2Auto.toFixed(2);
       xArray.push("🚗 Auto"); 
       yArray.push(co2Auto);
     }
