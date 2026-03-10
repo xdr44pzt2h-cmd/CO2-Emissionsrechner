@@ -52,11 +52,19 @@ button.addEventListener("click", () => {
 
     if (personenAuto <= 0) {
       alert("Diese Website unterstützt noch kein teleportiertes Fahren - kommen Sie 2036 wieder!");
+      
+        xArray.length = 0;
+        yArray.length = 0;
+  
         return;
       }
     
     if (personenAuto > 7) {
       alert("Bruder dein Auto ist voll!?");
+
+        xArray.length = 0;
+        yArray.length = 0;
+
         return;
     }
 
@@ -104,7 +112,7 @@ button.addEventListener("click", () => {
     y: yArray,
     type: "bar",
     orientation: "v",
-    marker: { color: "rgb(0,130,60)" }  // ← deine alte Farbe
+    marker: { color: "rgb(0,130,60)" }  
   }];
 
   const layout = {
@@ -131,5 +139,6 @@ button.addEventListener("click", () => {
 
 
 });
+
 
 
