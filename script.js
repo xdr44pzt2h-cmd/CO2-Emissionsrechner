@@ -43,9 +43,14 @@ button.addEventListener("click", () => {
 
   // Distanz holen
   const distanz = Number(distanzFeld.value);
+  if (!distanz || distanz <= 0) {
+    alert("Na dann kannst du auch gleich zu Hause bleiben..");
+    return;
+  }
 
   // Ausgabe leeren
   ausgabe.innerHTML= ""; 
+  document.getElementById("myPlot").style.display = "none";
         
   if (document.getElementById("Auto").checked) {
     const personenAuto = Number(personenAutoFeld.value);
