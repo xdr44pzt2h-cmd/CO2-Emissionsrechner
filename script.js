@@ -55,6 +55,7 @@ button.addEventListener("click", () => {
       
         xArray.length = 0;
         yArray.length = 0;
+        ausgabe.innerHTML= ""; 
   
         return;
       }
@@ -62,10 +63,11 @@ button.addEventListener("click", () => {
     if (personenAuto > 7) {
       alert("Bruder dein Auto ist voll!?");
 
-        xArray.length = 0;
-        yArray.length = 0;
-
-        return;
+          xArray.length = 0;
+          yArray.length = 0;
+          ausgabe.innerHTML= ""; 
+          
+          return;
     }
 
     const co2Auto = (distanz * faktorAuto) / personenAuto;
@@ -139,6 +141,7 @@ button.addEventListener("click", () => {
 
 
 });
+
 
 
 
