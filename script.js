@@ -113,9 +113,10 @@ button.addEventListener("click", () => {
     yaxis: { title: "kg CO₂" }
   };
   
-  if (xArray.length > 0 && xArray.length < 7) {
+  if (xArray.length > 0) {
     Plotly.newPlot("myPlot", data, layout);
     document.getElementById("myPlot").style.display = "block";
+  }; 
 
   // Meme anzeigen (Popup)
   if (document.getElementById("Flugzeug").checked) {
@@ -133,6 +134,7 @@ button.addEventListener("click", () => {
 
 
 });
+
 
 
 
