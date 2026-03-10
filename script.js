@@ -29,6 +29,8 @@ autoBox.addEventListener("change", () => {
 
 // Reaktion auf Button-Klick
 button.addEventListener("click", () => {
+  
+  Plotly.purge("myPlot"); 
 
   document.getElementById("co2Auto").textContent = "-";
   document.getElementById("co2Bus").textContent = "-";
