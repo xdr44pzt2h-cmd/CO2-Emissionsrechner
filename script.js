@@ -41,7 +41,7 @@ button.addEventListener("click", () => {
   yArray.length = 0;
 
   // Distanz holen
-	if (distanzFeld.value.trim() === "" || Number(distanzFeld.value) <= 0) {
+	if (distanzFeld.value.trim() === "" || isNaN(distanzFeld.value) || Number(distanzFeld.value) <= 0) {
   	alert("Na dann kannst du auch gleich zu Hause bleiben..");
   	return;
 	}
