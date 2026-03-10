@@ -86,7 +86,7 @@ button.addEventListener("click", () => {
     const co2Fuss = distanz * faktorFuss;
     document.getElementById("co2Fuss").textContent =
       co2Fuss.toFixed(2);
-      xArray.push("🚶 zu Fuss"); 
+      xArray.push("🚶 zu Fuß"); 
       yArray.push(co2Fuss);
     }
 
@@ -130,3 +130,4 @@ button.addEventListener("click", () => {
 
 
 });
+
