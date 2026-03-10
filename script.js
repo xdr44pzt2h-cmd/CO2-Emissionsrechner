@@ -114,7 +114,6 @@ button.addEventListener("click", () => {
   };
   
   if (xArray.length > 0) {
-    ausgabe.innerHTML= ""; 
     Plotly.newPlot("myPlot", data, layout);
     document.getElementById("myPlot").style.display = "block";
   }; 
@@ -135,6 +134,7 @@ button.addEventListener("click", () => {
 
 
 });
+
 
 
 
