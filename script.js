@@ -117,13 +117,15 @@ button.addEventListener("click", () => {
     marker: { color: "rgb(0,130,60)" }  
   }];
 
+  // Diagramm annzeigen
   const layout = {
     title: "Vergleich der Verkehrsmittel",
     yaxis: { title: "kg CO₂" }
   };
-
-  Plotly.newPlot("myPlot", data, layout);
-  document.getElementById("myPlot").style.display = "block";
+  
+  if (xArray.length === 0) {
+    Plotly.newPlot("myPlot", data, layout);
+    document.getElementById("myPlot").style.display = "block";
 
   // Meme anzeigen (Popup)
   if (document.getElementById("Flugzeug").checked) {
@@ -141,6 +143,7 @@ button.addEventListener("click", () => {
 
 
 });
+
 
 
 
